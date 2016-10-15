@@ -4,7 +4,6 @@ Version 1.0
 ==================================================================
 Víctor Jiménez Fernández
 ==================================================================
-
 Pre-requisites for running the run_analysis.R script:
 
 User has extracted the data from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip, and unzipped it.
