@@ -4,6 +4,9 @@
 #   Date: 15/10/2016
 #
 
+#   We require this package for melt() and dcast() functions
+library(reshape2)
+
 #   Loading test files
 X_test<-read.table("test/X_test.txt")
 y_test<-read.table("test/y_test.txt")
@@ -35,7 +38,7 @@ X_train<-X_train[,c(562,563,1:561)]
 #   Binding sets
 set<-rbind(X_test,X_train)
 
-#   Changeing Activity numbers for Activity names 
+#   Changeing Activity numbers to Activity names 
 for(i in activity_labels$V1){
     set[set$Activity==i,"Activity"]<-as.character(activity_labels[i,2])
 }
@@ -49,7 +52,7 @@ names_2<-sapply(names_str,secondElement)
 mean_sd<-which(names_2=="mean()"|names_2=="sd()")
 set<-set[,c(1,2,mean_sd)]
 
-#   Changeing Activity numbers for Activity names 
+#   The average of each measurements of each Activity and each subject 
 g<-melt(set,id=c("Subject","Activity"))
 set2<-dcast(g,Subject + Activity~variable, mean)
 
