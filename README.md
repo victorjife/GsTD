@@ -8,7 +8,8 @@ Pre-requisites for running the run_analysis.R script:
 
 User has extracted the data from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip, and unzipped it.
 User has set their working directory (using setwd) to the location of the unzipped directory.
-User had installed the reshape2 package locally. This can be done by running install.packages('reshape2').
+User had 
+User had to be installed the reshape2 package locally. This can be done by running install.packages('reshape2')
 =====================================================================
 This project consists in tidy data from differents files to merge it. 
 
